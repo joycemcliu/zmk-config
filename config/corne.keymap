@@ -36,10 +36,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE  &kp Q               &kp W           &kp E               &kp R             &kp T    &kp Y      &kp U              &kp I                &kp O            &kp P                   &kp BSPC
-&kp TAB    &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G    &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp ENTER
-&kp LSHFT  &kp Z               &kp X           &kp C               &kp V             &kp B    &kp N      &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp ESC
-                                               &kp LGUI            &mo 2             &mo 1    &kp SPACE  &mo 1              &kp RALT
+&kp ESCAPE        &kp Q               &kp W           &kp E               &kp R             &kp T    &kp Y      &kp U              &kp I                &kp O            &kp P                   &kp BSPC
+&kp TAB           &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G    &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp ENTER
+&kp LEFT_COMMAND  &kp Z               &kp X           &kp C               &kp V             &kp B    &kp N      &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp RIGHT_COMMAND
+                                                      &kp LGUI            &mo 3             &mo 2    &kp SPACE  &mo 1              &kp CAPS
             >;
         };
 
@@ -52,12 +52,39 @@
             >;
         };
 
+        Nav2 {
+            bindings = <
+&trans  &trans            &kp LG(LC(W))  &kp LG(LC(LEFT_BRACKET))  &kp LC(LG(RIGHT_BRACKET))  &trans    &trans  &trans   &kp F18  &trans   &trans  &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_COMMAND          &kp LEFT_SHIFT             &trans    &trans  &kp F16  &kp F17  &kp F19  &trans  &trans
+&trans  &trans            &trans         &trans                    &trans                     &trans    &trans  &trans   &trans   &trans   &trans  &trans
+                                         &trans                    &trans                     &trans    &trans  &trans   &trans
+            >;
+        };
+
         Symbol1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp MINUS        &kp EQUAL             &kp LEFT_BRACKET  &kp ASTERISK       &kp GRAVE             &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp COLON         &kp DOUBLE_QUOTES  &kp NON_US_BACKSLASH  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCLAMATION  &kp AMPERSAND         &kp COMMA         &kp PERIOD         &kp SLASH             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp EXCLAMATION  &kp AMPERSAND         &kp COMMA         &kp PERIOD         &kp SLASH             &kp LCTRL
                         &trans  &trans  &trans    &trans           &trans                &trans
+            >;
+        };
+
+        symbol2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp UNDERSCORE   &kp PLUS               &kp RIGHT_BRACKET  &kp PERCENT       &kp TILDE     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp SQT           &kp PIPE      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp AT_SIGN      &kp HASH               &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION  &kp DOLLAR
+                        &trans  &trans  &trans    &trans           &trans                 &trans
+            >;
+        };
+
+        Number {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(G)  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                        &trans  &trans  &trans    &trans     &trans        &trans
             >;
         };
     };
