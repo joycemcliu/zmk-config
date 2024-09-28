@@ -87,10 +87,10 @@
 
         system {
             bindings = <
-&sys_reset  &bootloader   &trans      &trans      &trans      &trans    &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans  &trans
-&trans      &out OUT_TOG  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &trans    &trans  &trans           &trans           &trans           &trans  &trans
-&trans      &trans        &trans      &trans      &trans      &trans    &trans  &trans           &trans           &trans           &trans  &trans
-                                      &trans      &trans      &to 0     &to 0   &trans           &trans
+&trans  &trans        &trans      &trans      &trans      &trans    &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans  &trans
+&trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &trans    &trans  &trans           &trans           &trans           &trans  &trans
+&trans  &trans        &trans      &trans      &trans      &trans    &trans  &trans           &trans           &trans           &trans  &trans
+                                  &trans      &trans      &to 0     &to 0   &trans           &trans
             >;
         };
     };
