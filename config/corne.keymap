@@ -22,6 +22,19 @@
 };
 
 / {
+    behaviors {
+        mt_sh: shift_on_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_ON_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <155>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mt>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,10 +46,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q               &kp W           &kp E               &kp R             &kp T    &kp Y   &kp U              &kp I                &kp O            &kp P                   &kp BSPC
-&kp TAB           &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G    &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp ENTER
-&kp LEFT_COMMAND  &kp Z               &kp X           &kp C               &kp V             &kp B    &kp N   &kp M              &kp COMMA            &kp DOT          &kp FSLH                &kp RIGHT_COMMAND
-                                                      &to 0               &mo 3             &mo 2    &tog 1  &kp SPACE          &kp CAPS
+&kp ESCAPE        &kp Q               &kp W           &kp E               &kp R                &kp T    &kp Y   &kp U                 &kp I                &kp O            &kp P                   &kp BSPC
+&kp TAB           &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt_sh LEFT_SHIFT F  &kp G    &kp H   &mt_sh RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp ENTER
+&kp LEFT_COMMAND  &kp Z               &kp X           &kp C               &kp V                &kp B    &kp N   &kp M                 &kp COMMA            &kp DOT          &kp FSLH                &kp RIGHT_COMMAND
+                                                      &to 0               &mo 3                &mo 2    &tog 1  &kp SPACE             &kp CAPS
             >;
         };
 
@@ -52,7 +65,7 @@
         Nav2 {
             bindings = <
 &trans  &trans            &kp LG(LC(W))  &kp LG(LC(LEFT_BRACKET))  &kp LC(LG(RIGHT_BRACKET))  &trans    &trans  &trans   &kp F18  &trans   &trans  &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_COMMAND          &kp LEFT_SHIFT             &mo 1     &trans  &kp F16  &kp F17  &kp F19  &trans  &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_COMMAND          &kp LEFT_SHIFT             &mo 7     &trans  &kp F16  &kp F17  &kp F19  &trans  &trans
 &trans  &trans            &trans         &trans                    &trans                     &trans    &trans  &trans   &trans   &trans   &trans  &trans
                                          &trans                    &trans                     &trans    &trans  &to 0    &trans
             >;
@@ -91,6 +104,15 @@
 &trans  &trans  &trans      &kp C_BRI_DEC      &kp C_BRI_UP     &trans    &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans  &trans
 &trans  &trans  &trans      &trans             &trans           &trans    &trans  &trans           &trans           &trans           &trans  &trans
                             &trans             &trans           &to 0     &to 0   &trans           &trans
+            >;
+        };
+
+        Base {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans        &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
     };
