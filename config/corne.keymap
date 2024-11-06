@@ -58,7 +58,7 @@
 &trans  &trans            &kp LG(W)     &kp LG(LC(LEFT_BRACKET))  &kp LC(LG(RIGHT_BRACKET))  &trans    &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
 &trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND          &kp LEFT_SHIFT             &trans    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
 &trans  &trans            &trans        &trans                    &trans                     &trans    &trans  &trans    &trans        &trans     &trans  &trans
-                                        &trans                    &trans                     &trans    &trans  &to 0     &trans
+                                        &trans                    &trans                     &trans    &none   &to 0     &trans
             >;
         };
 
