@@ -74,7 +74,7 @@
         Nav2 {
             bindings = <
 &trans  &trans            &kp LG(W)     &kp LG(LC(LEFT_BRACKET))  &kp LC(LG(RIGHT_BRACKET))  &trans    &trans  &trans   &kp F18  &trans   &trans  &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND          &kp LEFT_SHIFT             &mo 7     &trans  &kp F16  &kp F17  &kp F19  &trans  &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND          &kp LEFT_SHIFT             &mo 8     &trans  &kp F16  &kp F17  &kp F19  &trans  &trans
 &trans  &trans            &trans        &trans                    &trans                     &trans    &trans  &trans   &trans   &trans   &trans  &trans
                                         &trans                    &trans                     &trans    &trans  &to 0    &trans
             >;
